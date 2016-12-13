@@ -5,6 +5,11 @@ body {
   position: relative;
 }
 
+.message {
+  text-align: center;
+  width: 100%;
+}
+
 .board {
   position: absolute;
   left: 50%;
