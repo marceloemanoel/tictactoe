@@ -16,15 +16,32 @@ export default class TicTacToe extends Component {
     ]
   };
 
-  playerClickedCell(evt) {
+  constructor(props) {
+    super(props);
+    this.state = {
+      board: props.board,
+      player: "x"
+    };
+  }
+
+  playerClickedCell(evt){
     const target = evt.target;
     const row = target.dataset.row;
     const col = target.dataset.column;
-    console.log(target, row, col);
+
+    const newBoard = this.state.board.slice();
+    const boardRow = this.state.board[row].slice();
+    boardRow[col] = this.state.player;
+    newBoard[row] = boardRow;
+
+    this.setState(Object.assign({
+      board: newBoard,
+      player: this.state.player === "x" ? "o" : "x"
+    }));
   }
 
   render() {
-    const board = this.props.board;
+    const board = this.state.board;
     return (
       <div className="board">
         <div className="cell cell_11" onClick={this.playerClickedCell} data-row="1" data-column="1">{board[1][1]}</div>
