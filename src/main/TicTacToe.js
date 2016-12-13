@@ -22,9 +22,11 @@ export default class TicTacToe extends Component {
       board: props.board,
       player: "x"
     };
+
+    this.playerClickedCell = this.playerClickedCell.bind(this);
   }
 
-  playerClickedCell(evt){
+  playerClickedCell(evt) {
     const target = evt.target;
     const row = target.dataset.row;
     const col = target.dataset.column;
