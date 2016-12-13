@@ -2,4 +2,90 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  position: relative;
+}
+
+.board {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 15%);
+  background-color: #14bdac;
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+}
+
+.cell {
+  width: 32.9%;
+  height: 33%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  
+}
+
+.cell .x,
+.cell .o,
+.cell ._ {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+}
+.x {
+  background-color: red;
+}
+.o {
+  background-color: white;
+}
+
+.cell_11 {
+  border-right: 3px solid rgba(0, 0, 0, 0.54);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_21 {
+  margin-top: -4px;
+  float: left;
+  border-right: 3px solid rgba(0, 0, 0, 0.54);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_31 {
+  border-right: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_13 {
+  border-left: 3px solid rgba(0, 0, 0, 0.54);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_23 {
+  float: left;
+  margin-top: -4px;
+  border-left: 3px solid rgba(0, 0, 0, 0.54);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_33 {
+  border-left: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_12 {
+  margin-top: -3px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_22 {
+  margin-top: -4px;
+  float: left;
+}
+
+.cell_32 {
+  margin-top: -3px;
+  border-top: 3px solid rgba(0, 0, 0, 0.54);
 }
