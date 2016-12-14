@@ -48,49 +48,49 @@ body {
   background-color: white;
 }
 
-.cell_11 {
+.cell_00 {
   border-right: 3px solid rgba(0, 0, 0, 0.54);
   border-bottom: 3px solid rgba(0, 0, 0, 0.54);
 }
 
-.cell_21 {
+.cell_10 {
   margin-top: -4px;
   float: left;
   border-right: 3px solid rgba(0, 0, 0, 0.54);
   border-bottom: 3px solid rgba(0, 0, 0, 0.54);
 }
 
-.cell_31 {
+.cell_20 {
   border-right: 3px solid rgba(0, 0, 0, 0.54);
 }
 
-.cell_13 {
+.cell_02 {
   border-left: 3px solid rgba(0, 0, 0, 0.54);
   border-bottom: 3px solid rgba(0, 0, 0, 0.54);
-}
-
-.cell_23 {
-  float: left;
-  margin-top: -4px;
-  border-left: 3px solid rgba(0, 0, 0, 0.54);
-  border-bottom: 3px solid rgba(0, 0, 0, 0.54);
-}
-
-.cell_33 {
-  border-left: 3px solid rgba(0, 0, 0, 0.54);
 }
 
 .cell_12 {
-  margin-top: -3px;
+  float: left;
+  margin-top: -4px;
+  border-left: 3px solid rgba(0, 0, 0, 0.54);
   border-bottom: 3px solid rgba(0, 0, 0, 0.54);
 }
 
 .cell_22 {
+  border-left: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_01 {
+  margin-top: -3px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.54);
+}
+
+.cell_11 {
   margin-top: -4px;
   float: left;
 }
 
-.cell_32 {
+.cell_21 {
   margin-top: -3px;
   border-top: 3px solid rgba(0, 0, 0, 0.54);
 }

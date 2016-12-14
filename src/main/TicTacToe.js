@@ -1,4 +1,5 @@
 import React, {PropTypes, Component} from "react";
+import Board from "./Board";
 
 export default class TicTacToe extends Component {
   
@@ -28,11 +29,7 @@ export default class TicTacToe extends Component {
     };
   }
 
-  playerClickedCell = (evt) => {
-    const target = evt.target;
-    const row = Number(target.dataset.row);
-    const col = Number(target.dataset.column);
-
+  playerClickedCell = (row, col) => {
     const newBoard = this.state.board.slice();
     const boardRow = this.state.board[row].slice();
     boardRow[col] = this.state.player;
@@ -59,17 +56,7 @@ export default class TicTacToe extends Component {
     return (
       <div>
         <h1 className="message">{gameOver ? "Game Over!" : ""}</h1>
-        <div className="board">
-          <div className="cell cell_11" onClick={this.playerClickedCell} data-row="0" data-column="0">{board[0][0]}</div>
-          <div className="cell cell_12" onClick={this.playerClickedCell} data-row="0" data-column="1">{board[0][1]}</div>
-          <div className="cell cell_13" onClick={this.playerClickedCell} data-row="0" data-column="2">{board[0][2]}</div>
-          <div className="cell cell_21" onClick={this.playerClickedCell} data-row="1" data-column="0">{board[1][0]}</div>
-          <div className="cell cell_22" onClick={this.playerClickedCell} data-row="1" data-column="1">{board[1][1]}</div>
-          <div className="cell cell_23" onClick={this.playerClickedCell} data-row="1" data-column="2">{board[1][2]}</div>
-          <div className="cell cell_31" onClick={this.playerClickedCell} data-row="2" data-column="0">{board[2][0]}</div>
-          <div className="cell cell_32" onClick={this.playerClickedCell} data-row="2" data-column="1">{board[2][1]}</div>
-          <div className="cell cell_33" onClick={this.playerClickedCell} data-row="2" data-column="2">{board[2][2]}</div>
-        </div>
+        <Board board={board} onChange={this.playerClickedCell}/>
       </div>      
     );
   }
