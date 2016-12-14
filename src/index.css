@@ -13,8 +13,7 @@ body {
 .board {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, 15%);
+  transform: translate(-50%, 0);
   background-color: #14bdac;
   width: 500px;
   height: 500px;
@@ -41,11 +40,12 @@ body {
   width: 40%;
   height: 40%;
 }
-.x {
-  background-color: red;
-}
-.o {
-  background-color: white;
+
+.centered-img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 .cell_00 {
